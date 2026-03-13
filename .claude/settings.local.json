@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(chmod +x /Users/rehan/Desktop/lab/hooks/pretool.sh /Users/rehan/Desktop/lab/hooks/posttool.sh)",
+      "Bash(git init:*)",
+      "Bash(gh auth:*)",
+      "mcp__github__search_repositories",
+      "mcp__github__create_repository",
+      "Bash(gh repo:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git remote:*)",
+      "Bash(mkdir -p /Users/rehan/Desktop/lab/hooks/logs && cp ~/.tool-use/logs/hooks.log /Users/rehan/Desktop/lab/hooks/logs/)",
+      "Bash(git -C /Users/rehan/Desktop/lab/hooks add -f .claude/settings.local.json logs/hooks.log README.md)"
+    ]
+  }
+}
