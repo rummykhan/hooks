@@ -11,7 +11,25 @@
       "Bash(git commit:*)",
       "Bash(git remote:*)",
       "Bash(mkdir -p /Users/rehan/Desktop/lab/hooks/logs && cp ~/.tool-use/logs/hooks.log /Users/rehan/Desktop/lab/hooks/logs/)",
-      "Bash(git -C /Users/rehan/Desktop/lab/hooks add -f .claude/settings.local.json logs/hooks.log README.md)"
+      "Bash(git -C /Users/rehan/Desktop/lab/hooks add -f .claude/settings.local.json logs/hooks.log README.md)",
+      "Bash(git -C /Users/rehan/Desktop/lab/hooks commit -m \"$\\(cat <<'EOF'\nAdd settings.local.json, sample logs, and README\n\n- Force-add .claude/settings.local.json with hook permissions\n- Copy tool-use logs from ~/.tool-use/logs as sample output\n- Add README documenting the hooks experiment\nEOF\n\\)\")",
+      "Bash(git -C /Users/rehan/Desktop/lab/hooks push 2>&1)",
+      "Bash(echo '{\"tool_name\":\"Read\",\"tool_input\":{\"file_path\":\"/some/normal/file.txt\"}}' | node /Users/rehan/Desktop/lab/hooks/pretool.js; echo \"Exit: $?\")",
+      "Bash(echo '{\"tool_name\":\"Read\",\"tool_input\":{\"file_path\":\"/Users/rehan/project/.env\"}}' | node /Users/rehan/Desktop/lab/hooks/pretool.js; echo \"Exit: $?\")",
+      "Bash(echo '{\"tool_name\":\"Read\",\"tool_input\":{\"file_path\":\"/some/file.txt\"}}' | node /Users/rehan/Desktop/lab/hooks/pretool.js > /dev/null 2>&1; echo $?)",
+      "Bash(echo '{\"tool_name\":\"Read\",\"tool_input\":{\"file_path\":\"/project/.env\"}}' | node /Users/rehan/Desktop/lab/hooks/pretool.js > /dev/null 2>&1; echo $?)",
+      "Bash(echo '{\"tool_name\":\"Read\",\"tool_input\":{\"file_path\":\"/project/.env.local\"}}' | node /Users/rehan/Desktop/lab/hooks/pretool.js > /dev/null 2>&1; echo $?)",
+      "Bash(echo '{\"tool_name\":\"Bash\",\"tool_input\":{\"command\":\"cat .env\"}}' | node /Users/rehan/Desktop/lab/hooks/pretool.js > /dev/null 2>&1; echo $?)",
+      "Bash(echo '{\"tool_name\":\"Read\",\"tool_input\":{\"file_path\":\"/some/file.txt\"}}' | node /Users/rehan/Desktop/lab/hooks/pretool.js; echo \"exit: $?\")",
+      "Bash(echo '{\"tool_name\":\"Read\",\"tool_input\":{\"file_path\":\"/project/.env\"}}' | node /Users/rehan/Desktop/lab/hooks/pretool.js; echo \"exit: $?\")",
+      "Bash(echo '{\"tool_name\":\"Read\",\"tool_input\":{\"file_path\":\"/app/.env.local\"}}' | node /Users/rehan/Desktop/lab/hooks/pretool.js; echo \"exit: $?\")",
+      "Bash(echo '{\"tool_name\":\"Bash\",\"tool_input\":{\"command\":\"cat .env\"}}' | node /Users/rehan/Desktop/lab/hooks/pretool.js; echo \"exit: $?\")",
+      "Bash(echo '{\"tool_name\":\"Read\",\"tool_input\":{\"file_path\":\"/app/.environment\"}}' | node /Users/rehan/Desktop/lab/hooks/pretool.js; echo \"exit: $?\")",
+      "Bash(echo '{\"tool_name\":\"Read\",\"tool_input\":{\"file_path\":\"/project/.env\"}}' | /usr/local/bin/node /Users/rehan/Desktop/lab/hooks/pretool.js > /tmp/hook_out.txt 2>&1; echo \"EXIT_CODE=$?\")",
+      "Bash(echo '{\"tool_name\":\"Read\",\"tool_input\":{\"file_path\":\"/some/file.txt\"}}' | /usr/local/bin/node /Users/rehan/Desktop/lab/hooks/pretool.js > /tmp/hook_out2.txt 2>&1; echo \"EXIT_CODE=$?\")",
+      "Bash(git -C /Users/rehan/Desktop/lab/hooks add pretool.js posttool.js hooks.json .claude/settings.json README.md logs/hooks.log)",
+      "Bash(git -C /Users/rehan/Desktop/lab/hooks status)",
+      "Bash(git -C /Users/rehan/Desktop/lab/hooks add -f .claude/settings.local.json)"
     ]
   }
 }
